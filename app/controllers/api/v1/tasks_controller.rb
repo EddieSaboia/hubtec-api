@@ -1,5 +1,5 @@
 class Api::V1::TasksController < Api::ApiController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_task, only: %i[ update destroy ]
   before_action :set_task_destroyed, only: %i[ delete ]
 
@@ -11,6 +11,7 @@ class Api::V1::TasksController < Api::ApiController
   def create
     @task = Task.new(task_params)
     @task.user_id = current_user.id
+    # @task.user_id = 1
     if @task.save
       render json: @task
     else

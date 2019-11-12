@@ -13,10 +13,6 @@ class Task < ApplicationRecord
     update(deleted_at: Time.current) if self.deleted_at.nil?
   end
 
-  def recycle
-    update(deleted_at: nil)
-  end
-
   def self.find_tasks_by_user(user_id = 1)
     {
         to_do: self.where('status = ? AND user_id = ?', 0, user_id),
