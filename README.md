@@ -1,5 +1,6 @@
 # README
-
+<h1>Descrição</h1>
+<p>Projeto em Ruby and Rails, para o front link <a href="https://github.com/EddieSaboia/hubtec-front">Clique Aqui</a>, em forma de uma API.</p>
 
 <h2>Como usar</h2>
 1. Download do projeto no GitHub
