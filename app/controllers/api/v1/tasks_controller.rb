@@ -4,7 +4,7 @@ class Api::V1::TasksController < Api::ApiController
   before_action :set_task_destroyed, only: %i[ delete ]
 
   def index
-    render json: Task.find_tasks_by_user()
+    render json: Task.find_tasks_by_user(current_user.id)
   end 
        
   def create
