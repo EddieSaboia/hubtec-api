@@ -7,7 +7,7 @@ class Api::V1::TasksController < Api::ApiController
     # render json: Task.find_tasks_by_user(current_user.id)
     render json: Task.find_tasks_by_user()
   end 
- 
+       
   def create
     @task = Task.new(task_params)
     @task.user_id = current_user.id
