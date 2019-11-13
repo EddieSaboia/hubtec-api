@@ -10,6 +10,7 @@ class Api::V1::TasksController < Api::ApiController
   def create
     @task = Task.new(task_params)
     @task.user_id = current_user.id
+    # @task.user_id = 1
     if @task.save
       render json: @task
     else
