@@ -10,13 +10,17 @@ git clone https://github.com/EddieSaboia/hubtec-api.git
 2. Open the project folder.
 
 3. Build the containers.
+
 docker-compose build
 
 4. Install dependencies.
+
 docker-compose run --rm app bundle install
 
 5. Run migrations
+
 docker-compose run --rm app bundle exec rake db:create db:migrate
 
 6. Start the server
+
 docker-compose up
